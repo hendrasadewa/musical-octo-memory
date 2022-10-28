@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import CoverSection from '../components/CoverSection';
+import CreditSection from '../components/CreditsSection';
 import EventInfoSection from '../components/EventInfoSection';
 import GuestbookSection from '../components/GuestbookSection';
 import IntroSection from '../components/IntroSection';
@@ -22,6 +23,7 @@ export default function Home() {
         <Mapview />
         <GuestbookSection />
       </div>
+      <CreditSection />
     </div>
   );
 }
