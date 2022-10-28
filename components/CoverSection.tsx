@@ -30,14 +30,14 @@ function CoverSection() {
           <span>kartasura</span>
         </div>
       </div>
-      <div className="absolute -left-32 -top-32 ">
+      <div className="absolute -left-40 -top-32 ">
         <img
           src="/assets/images/flower-circle.png"
           alt="decor"
           className="w-64 h-64"
         />
       </div>
-      <div className="absolute -right-32 -top-32">
+      <div className="absolute -right-40 -top-32">
         <img
           src="/assets/images/flower-circle.png"
           alt="decor"

@@ -1,3 +1,5 @@
+import GuestbookMessage from './GuestbookMessage';
+
 /* eslint-disable @next/next/no-img-element */
 function GuestbookSection() {
   return (
@@ -8,23 +10,7 @@ function GuestbookSection() {
         </h2>
         <div className="min-h-64 max-h-64 overflow-scroll">
           <div className="flex flex-col gap-4">
-            <div className="shadow-md rounded-lg bg-base-100 p-2 w-full">
-              <span className="font-bold text-brandLight">Hendra Sadewa</span>
-              <p className="text-right py-2">Happy weeding, 420 blaze it</p>
-              <p className="text-right font-mono py-2">12/01/2022 - 10.42</p>
-            </div>
-
-            <div className="shadow-md rounded-lg bg-base-100 p-2 w-full">
-              <span className="font-bold text-brandLight">Hendra Sadewa</span>
-              <p className="text-right py-2">Happy weeding, 420 blaze it</p>
-              <p className="text-right font-mono py-2">12/01/2022 - 10.42</p>
-            </div>
-
-            <div className="shadow-md rounded-lg bg-base-100 p-2 w-full">
-              <span className="font-bold text-brandLight">Hendra Sadewa</span>
-              <p className="text-right py-2">Happy weeding, 420 blaze it</p>
-              <p className="text-right font-mono py-2">12/01/2022 - 10.42</p>
-            </div>
+            
           </div>
         </div>
         <form className="my-6 flex flex-col gap-2">
