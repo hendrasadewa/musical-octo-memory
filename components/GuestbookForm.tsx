@@ -23,9 +23,6 @@ function GuestbookForm({ onSubmit, isLoading = false }: Props) {
 
   return (
     <form className="my-6 flex flex-col gap-2 max-w-xs" onSubmit={handleSubmit}>
-      <h2 className="text-lg font-playfair text-brandLight">
-        Sampaikan pesan kepada pengantin
-      </h2>
       <div className="form-control w-full">
         <label className="label" htmlFor="fromInput">
           <span className=" font-playfair label-text text-brandLight ">
@@ -36,7 +33,7 @@ function GuestbookForm({ onSubmit, isLoading = false }: Props) {
           type="text"
           name="fromInput"
           placeholder="Nama pengirim"
-          className=" font-playfair input input-border w-full text-brandLight"
+          className=" font-playfair input input-bordered w-full text-brandLight"
         />
       </div>
       <div className="form-control w-full">
@@ -48,7 +45,7 @@ function GuestbookForm({ onSubmit, isLoading = false }: Props) {
         <textarea
           name="messageInput"
           placeholder="Pesan kepada pengantin"
-          className="font-playfair textarea textarea-border w-full text-brandLight"
+          className="font-playfair textarea textarea-bordered w-full text-brandLight"
         />
       </div>
       <div className="form-control w-full">

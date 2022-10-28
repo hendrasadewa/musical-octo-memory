@@ -3,6 +3,7 @@ import CoverSection from '../components/CoverSection';
 import EventInfoSection from '../components/EventInfoSection';
 import GuestbookSection from '../components/GuestbookSection';
 import IntroSection from '../components/IntroSection';
+import Mapview from '../components/Mapview';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <CoverSection />
         <IntroSection />
         <EventInfoSection />
+        <Mapview />
         <GuestbookSection />
       </div>
     </div>

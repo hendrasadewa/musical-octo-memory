@@ -12,7 +12,7 @@ function GuestbookSection() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-6 justify-around items-center min-h-screen relative">
+    <div className="flex flex-col gap-6 justify-around items-center min-h-screen relative my-12 mt-32">
       <div>
         <h2 className="text-center text-brandLight text-6xl font-brittany my-12">
           Buku Tamu
@@ -26,16 +26,21 @@ function GuestbookSection() {
             />
           </div>
         </div>
-        <GuestbookForm
-          onSubmit={actions.handleSendMessage}
-          isLoading={state.isLoading}
-        />
       </div>
+        <div className="card w-full max-w-xs bg-base-100 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title font-playfair text-brandLight">Sampaikan pesan kepada pengantin</h2>
+            <GuestbookForm
+              onSubmit={actions.handleSendMessage}
+              isLoading={state.isLoading}
+            />
+          </div>
+        </div>
 
-      <div className="absolute -left-32 -top-20 ">
+      <div className="absolute -left-32 -top-48 ">
         <div className="w-64 h-64 bg-flower bg-no-repeat bg-center bg-contain scale-100 rotate-0" />
       </div>
-      <div className="absolute -bottom-12 -right-24">
+      <div className="absolute -bottom-48 -right-24">
         <div className="w-52 h-52 bg-flower bg-no-repeat bg-center bg-contain -rotate-0" />
       </div>
     </div>
