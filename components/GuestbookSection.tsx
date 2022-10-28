@@ -1,7 +1,16 @@
-import GuestbookMessage from './GuestbookMessage';
+import { FormEvent, useEffect } from 'react';
+import useGuestbook from '../hooks/useGuestbook';
+import GuestbookForm from './GuestbookForm';
+import GuestbookMessageList from './GuestbookMessageList';
 
 /* eslint-disable @next/next/no-img-element */
 function GuestbookSection() {
+  const [state, actions] = useGuestbook();
+
+  useEffect(() => {
+    actions.handleGetMessage();
+  }, []);
+
   return (
     <div className="flex flex-col gap-6 justify-around items-center min-h-screen relative">
       <div>
@@ -10,21 +19,17 @@ function GuestbookSection() {
         </h2>
         <div className="min-h-64 max-h-64 overflow-scroll">
           <div className="flex flex-col gap-4">
-            
-          </div>
-        </div>
-        <form className="my-6 flex flex-col gap-2">
-          <h2 className="text-lg font-playfair text-brandLight">
-            Sampaikan pesan kepada pengantin
-          </h2>
-          <div className="form-control w-full max-w-xs">
-            <textarea
-              placeholder="Type here"
-              className="textarea texarea-bordered w-full"
+            <GuestbookMessageList
+              isLoading={state.isLoading}
+              messages={state.messages}
+              error={state.error}
             />
           </div>
-          <button className="btn">Kirim</button>
-        </form>
+        </div>
+        <GuestbookForm
+          onSubmit={actions.handleSendMessage}
+          isLoading={state.isLoading}
+        />
       </div>
 
       <div className="absolute -left-32 -top-20 ">

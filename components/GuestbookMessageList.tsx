@@ -1,38 +1,24 @@
-import { useEffect, useState } from 'react';
+import { Message } from '../model/messageModel';
+import GuestbookMessage from './GuestbookMessage';
 
-interface Message {
-  id: string;
-  from: string;
-  message: string;
-  date: Date;
+interface Props {
+  isLoading: boolean;
+  messages: Message[];
+  error?: Error;
 }
 
-function GuestbookMessageList() {
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [isLoading, setLoading] = useState<boolean>(false);
-  const [errorMessage, setErrorMessage] = useState<string|undefined>();
-
-  useEffect(() => {
-    const fetchMessages = async () => {
-      setLoading(true);
-      try {
-        setMessages([]);
-      } catch (error) {
-        if (error instanceof Error) {
-          setErrorMessage(error.message);
-        }
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchMessages();
-  }, []);
-
+function GuestbookMessageList({ isLoading, messages, error }: Props) {
   return (
     <div className="min-h-64 max-h-64 overflow-scroll">
       <div className="flex flex-col gap-4">
-        
+        {messages.map(({ created_at, from, id, message }) => (
+          <GuestbookMessage
+            key={id}
+            date={created_at}
+            from={from}
+            message={message}
+          />
+        ))}
       </div>
     </div>
   );

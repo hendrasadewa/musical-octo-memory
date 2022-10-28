@@ -13,9 +13,12 @@ export interface MessagePayload {
 }
 
 export function getMessages() {
-  return supabase.from('messages');
+  return supabase
+    .from('guestbook')
+    .select('*')
+    .order('created_at', { ascending: false });
 }
 
 export function sendMessage(payload: MessagePayload) {
-  return supabase.from('message').upsert(payload);
+  return supabase.from('guestbook').insert(payload);
 }
