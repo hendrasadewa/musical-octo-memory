@@ -5,7 +5,7 @@ function CreditSection() {
         <p>
           Developed by{' '}
           <a className="link font-bold" href="https://hendrasadewa.com">
-            Hendra 'hare' Sadewa
+            Hendra &apos;hare&apos; Sadewa
           </a>
         </p>
         <p>
