@@ -34,6 +34,7 @@ function GuestbookForm({ onSubmit, isLoading = false }: Props) {
           name="fromInput"
           placeholder="Nama pengirim"
           className=" font-playfair input input-bordered w-full text-brandLight"
+          required
         />
       </div>
       <div className="form-control w-full">
@@ -46,6 +47,7 @@ function GuestbookForm({ onSubmit, isLoading = false }: Props) {
           name="messageInput"
           placeholder="Pesan kepada pengantin"
           className="font-playfair textarea textarea-bordered w-full text-brandLight"
+          required
         />
       </div>
       <div className="form-control w-full">
